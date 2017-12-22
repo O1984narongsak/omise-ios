@@ -15,22 +15,18 @@ import WebKit
     /// - parameter failedURL: A URL that was failed to handle in the authorizing payment process.
     @objc optional func omiseAuthorizingPaymentViewController(_ viewController: OmiseAuthorizingPaymentViewController,
                                                didFailedToLoadURL failedURL: URL)
-    
-    
-    /**
-     Asks the delegate whether to open another app to proceed the authroizing payment process on another app.
-     
-     Some payment methods need to authorized with external application,
-     for example some Alipay customers may want to authorize their payments via the Alipay app.
-
-     The default behavior will open those external app. You can implement this method to control the behavior.
-     
-     - Parameters:
-        - viewController: The authorizing payment controller that call this method.
-        - url: A URL with a custom URL scheme that will open external application.
-     - Returns: `true` if the delegate want to proceed the authorizing payment process in another app,
-     `false` to disallow that
-     */
+    /// Asks the delegate whether to open another app to proceed the authroizing payment process on another app.
+    /// 
+    /// Some payment methods need to authorized with external application,
+    /// for example some Alipay customers may want to authorize their payments via the Alipay app.
+    ///
+    /// The default behavior will open those external app. You can implement this method to control the behavior.
+    /// 
+    /// - Parameters:
+    ///    - viewController: The authorizing payment controller that call this method.
+    ///    - url: A URL with a custom URL scheme that will open external application.
+    /// - Returns: `true` if the delegate want to proceed the authorizing payment process in another app,
+    /// `false` to disallow that
     @objc optional func omiseAuthorizingPaymentViewController(_ viewController: OmiseAuthorizingPaymentViewController,
                                                               shouldProceedAuthorizationOnAnotherAppWithURL url: URL?) -> Bool
 }
