@@ -264,7 +264,17 @@ extension ViewController: OmiseAuthorizingPaymentViewControllerDelegate {
 }
 ```
 
+### Authorizing Payment via an external app
 
+Some payment methods allow users to authroze their payments with their apps, for example Alipay. When a user would like to authorize their payment with those apps, the `OmiseAuthorizingPaymentViewController` will automatically open those app by default. However merchants' developers are responsible to handle the come back from those app flow by themselves.  `Omise iOS SDK` cannot handle that for them.
+
+#### Come back flow implementation
+
+After a user authorizes a payment with an external application, they will be redirected to a specified `returned URL`. Developer need to implement either a [custom URL scheme](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html) or [Universal Link](https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html) and set a proper returned URL for the charge in order to allow user to navigate back to your app.
+
+#### Disallow opening external app default behavior
+
+In case merchants don't want to allow users to authroize their payments in those external apps, merchants can implement the `@objc optional public func omiseAuthorizingPaymentViewController(_ viewController: OmiseAuthorizingPaymentViewController, shouldProceedAuthorizationOnAnotherAppWithURL url: URL?) -> Bool` delegate method to override this behavior
 
 ## Contributing
 
