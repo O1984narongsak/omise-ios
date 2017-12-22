@@ -10,6 +10,29 @@ import WebKit
     func omiseAuthorizingPaymentViewController(_ viewController: OmiseAuthorizingPaymentViewController, didCompleteAuthorizingPaymentWithRedirectedURL redirectedURL: URL)
     /// A delegation method called when user cancel the authorizing payment process.
     func omiseAuthorizingPaymentViewControllerDidCancel(_ viewController: OmiseAuthorizingPaymentViewController)
+    /// A delegation method calledn when an URL is failed to handle in the authorizing payment process.
+    /// - parameter viewController: The authorizing payment controller that call this method
+    /// - parameter failedURL: A URL that was failed to handle in the authorizing payment process.
+    @objc optional func omiseAuthorizingPaymentViewController(_ viewController: OmiseAuthorizingPaymentViewController,
+                                               didFailedToLoadURL failedURL: URL)
+    
+    
+    /**
+     Asks the delegate whether to open another app to proceed the authroizing payment process on another app.
+     
+     Some payment methods need to authorized with external application,
+     for example some Alipay customers may want to authorize their payments via the Alipay app.
+
+     The default behavior will open those external app. You can implement this method to control the behavior.
+     
+     - Parameters:
+        - viewController: The authorizing payment controller that call this method.
+        - url: A URL with a custom URL scheme that will open external application.
+     - Returns: `true` if the delegate want to proceed the authorizing payment process in another app,
+     `false` to disallow that
+     */
+    @objc optional func omiseAuthorizingPaymentViewController(_ viewController: OmiseAuthorizingPaymentViewController,
+                                                              shouldProceedAuthorizationOnAnotherAppWithURL url: URL?) -> Bool
 }
 
 
@@ -27,7 +50,7 @@ public typealias Omise3DSViewControllerDelegate = OmiseAuthorizingPaymentViewCon
    This is still an experimental API. If you encountered with any problem with this API, please feel free to report to Omise.
  */
 public class OmiseAuthorizingPaymentViewController: UIViewController {
-    let webView: WKWebView = WKWebView(frame: CGRect.zero, configuration: WKWebViewConfiguration())
+    private let webView: WKWebView = WKWebView(frame: CGRect.zero, configuration: WKWebViewConfiguration())
     
     /// Authorized URL given from Omise in the created `Charge` object.
     public var authorizedURL: URL? {
@@ -43,7 +66,7 @@ public class OmiseAuthorizingPaymentViewController: UIViewController {
     /// The expected return URL patterns described in the URLComponents object.
     ///
     /// The rule is the scheme and host must be matched and must have the path as a prefix.
-    /// Example: if the return URL is `https://www.example.com/products/12345` the expected return URL should have a URLComponents with scheme of `https`, host of `www.example.com` and the path of `/products/`
+    /// Example: if the return URL is `https://www.example.com/products/12345` the expected return URL patterns should have a URLComponents with scheme of `https`, host of `www.example.com` and the path of `/products/`
     public var expectedReturnURLPatterns: [URLComponents] = []
     
     /// A delegate object that will recieved the authorizing payment events.
@@ -139,12 +162,45 @@ public class OmiseAuthorizingPaymentViewController: UIViewController {
 }
 
 extension OmiseAuthorizingPaymentViewController: WKNavigationDelegate {
-    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Swift.Void) {
-        if let url = navigationAction.request.url, verifyPaymentURL(url) {
-            decisionHandler(.cancel)
-            delegate?.omiseAuthorizingPaymentViewController(self, didCompleteAuthorizingPaymentWithRedirectedURL: url)
+    private class func canHandlesURLSchemeByDefault(_ scheme: String) -> Bool {
+        if #available(iOS 11.0, *) {
+            return WKWebView.handlesURLScheme(scheme)
         } else {
-            decisionHandler(.allow)
+            return Set(["https", "http", "about" /* for about:blank */]).contains(scheme)
+        }
+    }
+    
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Swift.Void) {
+        let actionPolicy: WKNavigationActionPolicy
+        defer {
+            decisionHandler(actionPolicy)
+        }
+        
+        guard let url = navigationAction.request.url else {
+            actionPolicy = .cancel
+            return
+        }
+        
+        if verifyPaymentURL(url) {
+            actionPolicy = .cancel
+            delegate?.omiseAuthorizingPaymentViewController(self, didCompleteAuthorizingPaymentWithRedirectedURL: url)
+        } else if let scheme = url.scheme, OmiseAuthorizingPaymentViewController.canHandlesURLSchemeByDefault(scheme) {
+            actionPolicy = .allow
+        } else {
+            actionPolicy = .cancel
+            guard delegate?.omiseAuthorizingPaymentViewController?(self, shouldProceedAuthorizationOnAnotherAppWithURL: url) ?? true else {
+                return
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: { success in
+                    if !success {
+                        self.delegate?.omiseAuthorizingPaymentViewController?(self, didFailedToLoadURL: url)
+                    }
+                })
+            } else if !UIApplication.shared.openURL(url) {
+                delegate?.omiseAuthorizingPaymentViewController?(self, didFailedToLoadURL: url)
+            }
         }
     }
 }
