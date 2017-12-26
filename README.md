@@ -214,10 +214,10 @@ class Handler: OmiseTokenRequestDelegate {
 Due to the size of Card.io library, we decided to not to include it as a default. If you want the `Card.io` feature in our `Credit Card Form` you have to integrate our SDK manually without `Carthage`
 
 1. Download or clone Omise iOS SDK from github
-1. Initialize git submodule in Omise iOS SDK directory using `git submodule update --init` command.
-1. Add `OmiseSDK.xcodeproj` project into your Xcode project or workspace
-1. Add `OmiseSDK Card.io` Framework Target in Omise iOS SDK repository as your target dependency.
-1. Linked against and Embeded `OmiseSDK` Framework into your app.
+2. Initialize git submodule in Omise iOS SDK directory using `git submodule update --init` command.
+3. Add `OmiseSDK.xcodeproj` project into your Xcode project or workspace
+4. Add `OmiseSDK Card.io` Framework Target in Omise iOS SDK repository as your target dependency.
+5. Linked against and Embeded `OmiseSDK` Framework into your app.
 
 For more information about target dependency and link to frameworks, please refer to Xcode Help `Building Targets in the Correct Order` and `Link to libraries and frameworks`.
 
@@ -270,7 +270,7 @@ Some payment methods allow users to authroze their payments with their apps, for
 
 #### Come back flow implementation
 
-After a user authorizes a payment with an external application, they will be redirected to a specified `returned URL`. Developer need to implement either a [custom URL scheme](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html) or [Universal Link](https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html) and set a proper returned URL for the charge in order to allow user to navigate back to your app.
+After a user authorizes a payment with an external application, they will be redirected to a specified `returned URL`. Developer need to implement a [Universal Link](https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html) and set a corresponding returned URL for the charge in order to allow user to navigate back to your app.
 
 #### Disallow opening external app default behavior
 

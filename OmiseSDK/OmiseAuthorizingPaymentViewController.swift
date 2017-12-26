@@ -38,7 +38,7 @@ public typealias Omise3DSViewController = OmiseAuthorizingPaymentViewController
 public typealias Omise3DSViewControllerDelegate = OmiseAuthorizingPaymentViewControllerDelegate
 
 
-/*:
+/**
  Drop-in authorizing payment handler view controller that automatically display the authorizing payment verification form
  which supports `3DS`, `Internet Banking` and other offsite payment methods those need to be authorized via a web browser.
  
@@ -154,6 +154,28 @@ public class OmiseAuthorizingPaymentViewController: UIViewController {
     
     @IBAction func cancelAuthorizingPaymentProcess(_ sender: UIBarButtonItem) {
         delegate?.omiseAuthorizingPaymentViewControllerDidCancel(self)
+    }
+    
+    
+    /// A helper method to handle the opened URL opening from another app in the authorizing payment flow with an external app.
+    /// Call this method if you want to unify the handle the `returned URL` code via its delegate.
+    ///
+    /// - Note:
+    /// Handle the opened URL opening from another app. This method is a part of the authorizing payment flow with an external app.
+    /// After a user finishs the authorizing payment flow via an external app, the app will redirect user back to the `return URL`.
+    /// Developer need to implement the come back flow to go back to the app and let user continue his/her purchase.
+    ///
+    /// - Parameter url: The opened URL given to the App Delegate.
+    /// - Returns: `true` if the given URL matchs the expected URL patterns, `false` if otherwise.
+    @discardableResult
+    public func handleOpenedURL(_ url: URL) -> Bool {
+        let isVerifedURL = verifyPaymentURL(url)
+        
+        if isVerifedURL {
+            delegate?.omiseAuthorizingPaymentViewController(self, didCompleteAuthorizingPaymentWithRedirectedURL: url)
+        }
+        
+        return isVerifedURL
     }
 }
 
