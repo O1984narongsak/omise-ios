@@ -1,0 +1,15 @@
+--- !tapi-tbd-v2
+archs:           [ i386, x86_64, armv7, arm64 ]
+uuids:           [ 'i386: 69005284-6272-3415-AA0D-0FC57F67EB60', 'x86_64: 2A2622E4-303D-30AC-91AC-F0B9DE7ED166', 
+                   'armv7: B1F59E64-6CCE-36ED-9C06-E85FB92C9289', 'arm64: 7072867F-A263-35FE-9271-0E2D89850C96' ]
+platform:        ios
+flags:           [ not_app_extension_safe ]
+install-name:    '@rpath/CardIO.framework/CardIO'
+objc-constraint: none
+exports:         
+  - archs:           [ i386, x86_64, armv7, arm64 ]
+    symbols:         [ _CardIOCurrentScanningOrientation, _CardIOScanningOrientationAnimationDuration, 
+                       _CardIOScanningOrientationDidChangeNotification ]
+    objc-classes:    [ _CardIOCreditCardInfo, _CardIOPaymentViewController, _CardIOUtilities, 
+                       _CardIOView ]
+...

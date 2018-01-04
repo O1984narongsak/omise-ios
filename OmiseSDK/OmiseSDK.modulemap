@@ -5,6 +5,6 @@ framework module OmiseSDK {
     module * { export * }
     
     module Private {
-        umbrella header "CardIO.h"
+        header "OMSCardIOManager.h"
     }
 }

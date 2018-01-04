@@ -1,8 +1,6 @@
 import UIKit
+import CardIO
 
-#if CardIO
-import OmiseSDK.Private
-#endif
 
 /// Delegate to receive card tokenization events.
 @objc(OMSCreditCardFormDelegate) public protocol CreditCardFormDelegate: class {
@@ -76,11 +74,7 @@ public class CreditCardFormController: UITableViewController {
     }
     
     private var cardIOAvailable: Bool {
-        #if CardIO
-            return CardIOUtilities.canReadCardWithCamera()
-        #else
-            return false
-        #endif
+        return OMSCardIOManager.canReadCardWithCamera()
     }
     
     /// Factory method for creating CreditCardFormController with given public key.
@@ -220,18 +214,16 @@ public class CreditCardFormController: UITableViewController {
     }
     
     @IBAction func presentCardIOViewController() {
-        #if CardIO
-            guard let cardIOController = CardIOPaymentViewController(paymentDelegate: self) else {
-                return
-            }
-            cardIOController.hideCardIOLogo = true
-            cardIOController.disableManualEntryButtons = true
-            cardIOController.collectCVV = false
-            cardIOController.collectExpiry = true
-            cardIOController.scanExpiry = true
-            cardIOController.suppressScanConfirmation = true
-            present(cardIOController, animated: true, completion: nil)
-        #endif
+        guard let cardIOController = CardIOPaymentViewController(paymentDelegate: self) else {
+            return
+        }
+        cardIOController.hideCardIOLogo = true
+        cardIOController.disableManualEntryButtons = true
+        cardIOController.collectCVV = false
+        cardIOController.collectExpiry = true
+        cardIOController.scanExpiry = true
+        cardIOController.suppressScanConfirmation = true
+        present(cardIOController, animated: true, completion: nil)
     }
     
 }
@@ -274,7 +266,6 @@ extension CreditCardFormController {
     }
 }
 
-#if CardIO
 extension CreditCardFormController: CardIOPaymentViewControllerDelegate {
     public func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
         dismiss(animated: true, completion: nil)
@@ -300,5 +291,4 @@ extension CreditCardFormController: CardIOPaymentViewControllerDelegate {
         })
     }
 }
-#endif
 

@@ -34,26 +34,10 @@
 		8A188BB01D951E3C00FFF467 /* OmiseAuthorizingPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A188BAF1D951E3C00FFF467 /* OmiseAuthorizingPaymentViewController.swift */; };
 		8A188BB11D951E3C00FFF467 /* OmiseAuthorizingPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A188BAF1D951E3C00FFF467 /* OmiseAuthorizingPaymentViewController.swift */; };
 		8A1D4C661D51B72200C7837C /* CreditCardFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1D4C651D51B72200C7837C /* CreditCardFormController.swift */; };
-		8A1F38DC1D61C7C200698781 /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A09278F1D535548008D393F /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8A1F38DD1D61C7C200698781 /* CardIOPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A09278D1D535548008D393F /* CardIOPaymentViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8A1F38DE1D61C7C200698781 /* CardIOViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0927911D535548008D393F /* CardIOViewDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8A1F38DF1D61C7C200698781 /* CardIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0927891D535548008D393F /* CardIO.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8A1F38E01D61C7C200698781 /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A09278C1D535548008D393F /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8A1F38E11D61C7C200698781 /* CardIOPaymentViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A09278E1D535548008D393F /* CardIOPaymentViewControllerDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8A1F38E21D61C7C200698781 /* OmiseSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2259311B1CE3210700841B86 /* OmiseSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A1F38E31D61C7C200698781 /* CardIOCreditCardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A09278B1D535548008D393F /* CardIOCreditCardInfo.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8A1F38E41D61C7C200698781 /* CardIOView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0927901D535548008D393F /* CardIOView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8A1F38E61D61C7C200698781 /* OmiseSDK.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D59831D5317DD005D3346 /* OmiseSDK.storyboard */; };
 		8A1F38E71D61C7C200698781 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981FA5F91D0EDDB0009ECEDC /* Localizable.strings */; };
 		8A1F38E81D61C7C200698781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2225B3531D0FDD63003EB396 /* Assets.xcassets */; };
-		8A1F38F11D61C7E400698781 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38EE1D61C7E400698781 /* libopencv_core.a */; };
-		8A1F38F21D61C7E400698781 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38EF1D61C7E400698781 /* libopencv_imgproc.a */; };
-		8A1F38F31D61C7E400698781 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38F01D61C7E400698781 /* libCardIO.a */; };
-		8A1F38F81D61C84900698781 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38F41D61C84900698781 /* Accelerate.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8A1F38FA1D61C84900698781 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38F61D61C84900698781 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8A1F38FB1D61C84900698781 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38F71D61C84900698781 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8A1F38FD1D61C85900698781 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38FC1D61C85900698781 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8A1F38FF1D61C86300698781 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38FE1D61C86300698781 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8A1F39031D61C8B500698781 /* ErrorMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982237BF1D115BD400D266F3 /* ErrorMessageCell.swift */; };
 		8A1F39041D61C8B500698781 /* OmiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E0AE01D13B0DD002B6922 /* OmiseTableViewCell.swift */; };
 		8A1F39051D61C8B500698781 /* OmiseSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220F1A61D0FEE85008CD89F /* OmiseSDKClient.swift */; };
@@ -81,6 +65,14 @@
 		8A1F391B1D61C8B500698781 /* CardBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259314D1CE46E5700841B86 /* CardBrand.swift */; };
 		8A1F392C1D61D8E900698781 /* OmiseSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38EC1D61C7C200698781 /* OmiseSDK.framework */; };
 		8A1F392D1D61D8E900698781 /* OmiseSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F38EC1D61C7C200698781 /* OmiseSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A3841871FFE04B000D23822 /* OMSCardIOManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3841851FFE04B000D23822 /* OMSCardIOManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A3841881FFE04B000D23822 /* OMSCardIOManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3841851FFE04B000D23822 /* OMSCardIOManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A3841891FFE04B000D23822 /* OMSCardIOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3841861FFE04B000D23822 /* OMSCardIOManager.m */; };
+		8A38418A1FFE04B000D23822 /* OMSCardIOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3841861FFE04B000D23822 /* OMSCardIOManager.m */; };
+		8A38418C1FFE078400D23822 /* OmiseSDK-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A38418B1FFE078400D23822 /* OmiseSDK-Bridging.h */; };
+		8A38418D1FFE078400D23822 /* OmiseSDK-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A38418B1FFE078400D23822 /* OmiseSDK-Bridging.h */; };
+		8A3841B01FFE33C100D23822 /* CardIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3841AF1FFE33C100D23822 /* CardIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8A3841B21FFE33E000D23822 /* CardIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3841AF1FFE33C100D23822 /* CardIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8A5D59811D5317DD005D3346 /* OmiseSDK.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D59831D5317DD005D3346 /* OmiseSDK.storyboard */; };
 		981FA5F71D0EDDB0009ECEDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981FA5F91D0EDDB0009ECEDC /* Localizable.strings */; };
 		982237C11D115BD400D266F3 /* ErrorMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982237BF1D115BD400D266F3 /* ErrorMessageCell.swift */; };
@@ -163,29 +155,28 @@
 		22D480AB1D0EB29C00544CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22E0DBD61D0EBE2E00472C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A00FEC21F1DE88600246078 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		8A0927891D535548008D393F /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
-		8A09278A1D535548008D393F /* CardIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIO.m; sourceTree = "<group>"; };
-		8A09278B1D535548008D393F /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
-		8A09278C1D535548008D393F /* CardIODetectionMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIODetectionMode.h; sourceTree = "<group>"; };
-		8A09278D1D535548008D393F /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
-		8A09278E1D535548008D393F /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
-		8A09278F1D535548008D393F /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
-		8A0927901D535548008D393F /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
-		8A0927911D535548008D393F /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
 		8A09281B1D544C3F008D393F /* OmiseSDK.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = OmiseSDK.modulemap; sourceTree = "<group>"; };
 		8A188BAF1D951E3C00FFF467 /* OmiseAuthorizingPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseAuthorizingPaymentViewController.swift; sourceTree = "<group>"; };
 		8A1D4C651D51B72200C7837C /* CreditCardFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CreditCardFormController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		8A1F38EC1D61C7C200698781 /* OmiseSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OmiseSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A1F38EE1D61C7E400698781 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
-		8A1F38EF1D61C7E400698781 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
-		8A1F38F01D61C7E400698781 /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
-		8A1F38F41D61C84900698781 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		8A1F38F51D61C84900698781 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
-		8A1F38F61D61C84900698781 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		8A1F38F71D61C84900698781 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		8A1F38FC1D61C85900698781 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		8A1F38FE1D61C86300698781 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		8A55E4B71DA3CF0100AC515A /* Card.io-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Card.io-Info.plist"; sourceTree = "<group>"; };
+		8A3841851FFE04B000D23822 /* OMSCardIOManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMSCardIOManager.h; sourceTree = "<group>"; };
+		8A3841861FFE04B000D23822 /* OMSCardIOManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMSCardIOManager.m; sourceTree = "<group>"; };
+		8A38418B1FFE078400D23822 /* OmiseSDK-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OmiseSDK-Bridging.h"; sourceTree = "<group>"; };
+		8A38418F1FFE1DAC00D23822 /* CardIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardIO.framework; path = Library/Device/CardIO.framework; sourceTree = "<group>"; };
+		8A3841911FFE237C00D23822 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = Library/card.io/CardIO/libopencv_core.a; sourceTree = "<group>"; };
+		8A3841921FFE237D00D23822 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = Library/card.io/CardIO/libopencv_imgproc.a; sourceTree = "<group>"; };
+		8A3841931FFE237D00D23822 /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCardIO.a; path = Library/card.io/CardIO/libCardIO.a; sourceTree = "<group>"; };
+		8A3841971FFE23B400D23822 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8A3841991FFE23BD00D23822 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		8A38419B1FFE23C200D23822 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8A38419D1FFE23CB00D23822 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8A38419F1FFE23D900D23822 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		8A3841A11FFE23DF00D23822 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8A3841A41FFE254F00D23822 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		8A3841A61FFE256C00D23822 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8A3841AB1FFE308B00D23822 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8A3841AD1FFE319B00D23822 /* CardIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardIO.framework; path = Library/CardIO.framework; sourceTree = "<group>"; };
+		8A3841AF1FFE33C100D23822 /* CardIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardIO.framework; sourceTree = "<group>"; };
 		8A55E4B91DA3CF5900AC515A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8A55E4BA1DA3CF6100AC515A /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Main.strings; sourceTree = "<group>"; };
 		8A5D59821D5317DD005D3346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OmiseSDK.storyboard; sourceTree = "<group>"; };
@@ -218,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3841B01FFE33C100D23822 /* CardIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,14 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1F38FF1D61C86300698781 /* CoreMedia.framework in Frameworks */,
-				8A1F38FD1D61C85900698781 /* AudioToolbox.framework in Frameworks */,
-				8A1F38F81D61C84900698781 /* Accelerate.framework in Frameworks */,
-				8A1F38FA1D61C84900698781 /* AVFoundation.framework in Frameworks */,
-				8A1F38FB1D61C84900698781 /* MobileCoreServices.framework in Frameworks */,
-				8A1F38F21D61C7E400698781 /* libopencv_imgproc.a in Frameworks */,
-				8A1F38F31D61C7E400698781 /* libCardIO.a in Frameworks */,
-				8A1F38F11D61C7E400698781 /* libopencv_core.a in Frameworks */,
+				8A3841B21FFE33E000D23822 /* CardIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +248,7 @@
 				987A02CA1CE35D5E0035417A /* OmiseSDKTests */,
 				22D4809E1D0EB29C00544CE1 /* ExampleApp */,
 				225931191CE3210700841B86 /* Products */,
+				8A38418E1FFE1DAC00D23822 /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -282,10 +268,12 @@
 		2259311A1CE3210700841B86 /* OmiseSDK */ = {
 			isa = PBXGroup;
 			children = (
-				8A00FEC21F1DE88600246078 /* README.md */,
+				8A38418B1FFE078400D23822 /* OmiseSDK-Bridging.h */,
 				2259311B1CE3210700841B86 /* OmiseSDK.h */,
+				8A3841851FFE04B000D23822 /* OMSCardIOManager.h */,
+				8A3841861FFE04B000D23822 /* OMSCardIOManager.m */,
+				8A00FEC21F1DE88600246078 /* README.md */,
 				8A09281B1D544C3F008D393F /* OmiseSDK.modulemap */,
-				8A55E4B71DA3CF0100AC515A /* Card.io-Info.plist */,
 				2259311D1CE3210700841B86 /* Info.plist */,
 				2259314D1CE46E5700841B86 /* CardBrand.swift */,
 				2259314F1CE46F7F00841B86 /* CardNumber.swift */,
@@ -327,42 +315,30 @@
 		8A0927841D535548008D393F /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				8A0927851D535548008D393F /* card.io */,
+				8A3841AF1FFE33C100D23822 /* CardIO.framework */,
 			);
 			path = Library;
 			sourceTree = SOURCE_ROOT;
 		};
-		8A0927851D535548008D393F /* card.io */ = {
+		8A38418E1FFE1DAC00D23822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A0927881D535548008D393F /* CardIO */,
-				8A1F38FE1D61C86300698781 /* CoreMedia.framework */,
-				8A1F38FC1D61C85900698781 /* AudioToolbox.framework */,
-				8A1F38F41D61C84900698781 /* Accelerate.framework */,
-				8A1F38F51D61C84900698781 /* AudioUnit.framework */,
-				8A1F38F61D61C84900698781 /* AVFoundation.framework */,
-				8A1F38F71D61C84900698781 /* MobileCoreServices.framework */,
+				8A3841AD1FFE319B00D23822 /* CardIO.framework */,
+				8A3841AB1FFE308B00D23822 /* libsqlite3.0.tbd */,
+				8A3841A61FFE256C00D23822 /* CoreMedia.framework */,
+				8A3841A41FFE254F00D23822 /* CoreAudio.framework */,
+				8A3841A11FFE23DF00D23822 /* MobileCoreServices.framework */,
+				8A38419F1FFE23D900D23822 /* AudioUnit.framework */,
+				8A38419D1FFE23CB00D23822 /* AudioToolbox.framework */,
+				8A38419B1FFE23C200D23822 /* AVFoundation.framework */,
+				8A3841991FFE23BD00D23822 /* CoreImage.framework */,
+				8A3841971FFE23B400D23822 /* Accelerate.framework */,
+				8A3841931FFE237D00D23822 /* libCardIO.a */,
+				8A3841911FFE237C00D23822 /* libopencv_core.a */,
+				8A3841921FFE237D00D23822 /* libopencv_imgproc.a */,
+				8A38418F1FFE1DAC00D23822 /* CardIO.framework */,
 			);
-			path = card.io;
-			sourceTree = "<group>";
-		};
-		8A0927881D535548008D393F /* CardIO */ = {
-			isa = PBXGroup;
-			children = (
-				8A0927891D535548008D393F /* CardIO.h */,
-				8A09278A1D535548008D393F /* CardIO.m */,
-				8A09278B1D535548008D393F /* CardIOCreditCardInfo.h */,
-				8A09278C1D535548008D393F /* CardIODetectionMode.h */,
-				8A09278D1D535548008D393F /* CardIOPaymentViewController.h */,
-				8A09278E1D535548008D393F /* CardIOPaymentViewControllerDelegate.h */,
-				8A09278F1D535548008D393F /* CardIOUtilities.h */,
-				8A0927901D535548008D393F /* CardIOView.h */,
-				8A0927911D535548008D393F /* CardIOViewDelegate.h */,
-				8A1F38EE1D61C7E400698781 /* libopencv_core.a */,
-				8A1F38EF1D61C7E400698781 /* libopencv_imgproc.a */,
-				8A1F38F01D61C7E400698781 /* libCardIO.a */,
-			);
-			path = CardIO;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		986406361CFEA7EA004BCF51 /* Fields */ = {
@@ -414,7 +390,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3841871FFE04B000D23822 /* OMSCardIOManager.h in Headers */,
 				2259311C1CE3210700841B86 /* OmiseSDK.h in Headers */,
+				8A38418C1FFE078400D23822 /* OmiseSDK-Bridging.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,15 +400,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1F38DC1D61C7C200698781 /* CardIOUtilities.h in Headers */,
-				8A1F38DD1D61C7C200698781 /* CardIOPaymentViewController.h in Headers */,
-				8A1F38DE1D61C7C200698781 /* CardIOViewDelegate.h in Headers */,
-				8A1F38DF1D61C7C200698781 /* CardIO.h in Headers */,
-				8A1F38E01D61C7C200698781 /* CardIODetectionMode.h in Headers */,
-				8A1F38E11D61C7C200698781 /* CardIOPaymentViewControllerDelegate.h in Headers */,
+				8A3841881FFE04B000D23822 /* OMSCardIOManager.h in Headers */,
 				8A1F38E21D61C7C200698781 /* OmiseSDK.h in Headers */,
-				8A1F38E31D61C7C200698781 /* CardIOCreditCardInfo.h in Headers */,
-				8A1F38E41D61C7C200698781 /* CardIOView.h in Headers */,
+				8A38418D1FFE078400D23822 /* OmiseSDK-Bridging.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,16 +495,17 @@
 				TargetAttributes = {
 					225931171CE3210700841B86 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					22D4809C1D0EB29C00544CE1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = AWD3VR6J7J;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					8A1F38BF1D61C7C200698781 = {
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0920;
 					};
 					987A02C81CE35D5E0035417A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -620,6 +593,7 @@
 				986406351CFEA7E4004BCF51 /* OmiseTextField.swift in Sources */,
 				2220F1AD1D0FEE85008CD89F /* OmiseToken.swift in Sources */,
 				2220F1A91D0FEE85008CD89F /* OmiseCard.swift in Sources */,
+				8A3841891FFE04B000D23822 /* OMSCardIOManager.m in Sources */,
 				8A1D4C661D51B72200C7837C /* CreditCardFormController.swift in Sources */,
 				986406311CFEA7E4004BCF51 /* CardExpiryDateTextField.swift in Sources */,
 				986406341CFEA7E4004BCF51 /* CardNameTextField.swift in Sources */,
@@ -664,6 +638,7 @@
 				8A1F39061D61C8B500698781 /* OmiseError.swift in Sources */,
 				8A1F39121D61C8B500698781 /* ExpiryDateFormCell.swift in Sources */,
 				8A1F39161D61C8B500698781 /* Globals.swift in Sources */,
+				8A38418A1FFE04B000D23822 /* OMSCardIOManager.m in Sources */,
 				8A1F391B1D61C8B500698781 /* CardBrand.swift in Sources */,
 				8A1F39191D61C8B500698781 /* CardNumberTextField.swift in Sources */,
 				8A1F390E1D61C8B500698781 /* CardExpiryDateTextField.swift in Sources */,
@@ -867,6 +842,7 @@
 		225931211CE3210700841B86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -876,21 +852,32 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = OmiseSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-lc++";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
+				MODULEMAP_FILE = "$(SRCROOT)/OmiseSDK/OmiseSDK.modulemap";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		225931221CE3210700841B86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -900,12 +887,21 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = OmiseSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-lc++";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
+				MODULEMAP_FILE = "$(SRCROOT)/OmiseSDK/OmiseSDK.modulemap";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -919,7 +915,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AWD3VR6J7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -944,7 +944,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AWD3VR6J7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -964,6 +968,7 @@
 		8A1F38EA1D61C7C200698781 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -974,30 +979,32 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
-				INFOPLIST_FILE = "OmiseSDK/Card.io-Info.plist";
+				INFOPLIST_FILE = OmiseSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/card.io/CardIO",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				MODULEMAP_FILE = "$(SRCROOT)/OmiseSDK/OmiseSDK.modulemap";
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
 				);
-				OTHER_SWIFT_FLAGS = "-D CardIO";
 				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
 				PRODUCT_NAME = OmiseSDK;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8A1F38EB1D61C7C200698781 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1008,21 +1015,21 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
-				INFOPLIST_FILE = "OmiseSDK/Card.io-Info.plist";
+				INFOPLIST_FILE = OmiseSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/card.io/CardIO",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				MODULEMAP_FILE = "$(SRCROOT)/OmiseSDK/OmiseSDK.modulemap";
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
 				);
-				OTHER_SWIFT_FLAGS = "-D CardIO";
 				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
 				PRODUCT_NAME = OmiseSDK;
 				SKIP_INSTALL = YES;
