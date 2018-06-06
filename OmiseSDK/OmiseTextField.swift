@@ -48,9 +48,9 @@ public protocol OmiseTextFieldValidationDelegate {
     }
     
     private func setup() {
-        addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-        addTarget(self, action: #selector(didBeginEditing), for: .editingDidBegin)
-        addTarget(self, action: #selector(didEndEditing), for: .editingDidEnd)
+        addTarget(self, action: #selector(textDidChange), for: UIControl.Event.editingChanged)
+        addTarget(self, action: #selector(didBeginEditing), for: UIControl.Event.editingDidBegin)
+        addTarget(self, action: #selector(didEndEditing), for: UIControl.Event.editingDidEnd)
     }
     
     @objc func didBeginEditing() {

@@ -5,12 +5,12 @@ import Foundation
     private var textFields = [UITextField]() {
         willSet {
             textFields.forEach { (textField) in
-                textField.removeTarget(self, action: #selector(textFieldDidBeginEditing), for: UIControlEvents.editingDidBegin)
+                textField.removeTarget(self, action: #selector(textFieldDidBeginEditing), for: UIControl.Event.editingDidBegin)
             }
         }
         didSet {
             textFields.forEach { (textField) in
-                textField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: UIControlEvents.editingDidBegin)
+                textField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: UIControl.Event.editingDidBegin)
                 textField.inputAccessoryView = self
             }
         }

@@ -99,7 +99,7 @@ public class CreditCardFormController: UITableViewController {
         
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         accessoryView.attach(to: formFields, in: self)
         
@@ -108,7 +108,7 @@ public class CreditCardFormController: UITableViewController {
             cardNumberCell?.textField.rightViewMode = .always
         }
         tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         tableView.tableFooterView = UIView()
         let preferredWidth = formLabels.reduce(CGFloat.leastNormalMagnitude) { (currentPreferredWidth, label)  in
@@ -124,19 +124,19 @@ public class CreditCardFormController: UITableViewController {
         super.viewDidAppear(animated)
         
         formFields.forEach({ (field) in
-            field.addTarget(self, action: #selector(fieldDidChange), for: .editingChanged)
+            field.addTarget(self, action: #selector(fieldDidChange), for: UIControl.Event.editingChanged)
         })
         
-        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     override public func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         formFields.forEach({ (field) in
-            field.removeTarget(self, action: #selector(fieldDidChange), for: .editingChanged)
+            field.removeTarget(self, action: #selector(fieldDidChange), for: UIControl.Event.editingChanged)
         })
-        NotificationCenter().removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter().removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     @objc private func fieldDidChange(_ sender: AnyObject) {
